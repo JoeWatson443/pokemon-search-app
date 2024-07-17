@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Pokésearch">
+        <meta property="og:description" content="Find every pokéstat">
+        <meta property="og:image" content="https://i.imgur.com/0vVqOgJ.png">
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:title" content="Pokésearch">
+        <meta property="twitter:description" content="Find every pokéstat">
+        <meta property="twitter:image" content="https://i.imgur.com/0vVqOgJ.png">
+        <title>Pokémon Search App</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/43bc1f0798.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <main class="flex">
+            <div id="content" class="flex flex-col font">
+                <h1>Pokémon Search App</h1>
+                <div class="flex flex-col gap-32">
+                    <div class="flex flex-col gap-24">
+                        <form role="form" id="search-form">
+                            <div id="input-structure" class="flex flex-col gap-16">
+                                <input type="text" name="pokemonQuery" id="search-input" placeholder="Enter Pokémon name or ID" class="brd-12" required>
+                                <button id="search-button" type="submit" class="brd-rad btn-style">Search</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div id="results-card" class="flex flex-col brd-12">
+                        <div id="cash-drawer-display" class="cash-drawer-display">
+                            <div id="name-and-id" class="flex gap-8">
+                                <div class="fnt-700" id="pokemon-name"></div>
+                                <div id="pokemon-id"></div>
+                            </div>
+                            <div id="size" class="flex gap-8">
+                                <span id="weight"></span>
+                                <span id="height"></span>
+                            </div>
+                            <div id="sprite-container" class="sprite-container flex"></div>
+                            <div id="types" class="flex gap-8"></div>
+                          </div>
+                        <div id="results-list-container" class="brd-12">
+                            <table id="stat-table" class="pad-16">
+                                <tbody>
+                                    <tr>
+                                        <th id="stat-title">Base</th>
+                                        <th id="stat-title">Stats</th>
+                                    </tr>
+                                    <tr>
+                                        <th>HP</th>
+                                        <th id="hp"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Attack</th>
+                                        <th id="attack"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Defence</th>
+                                        <th id="defense"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Sp. Attack</th>
+                                        <th id="special-attack"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Sp. Defence</th>
+                                        <th id="special-defense"></th>
+                                    </tr>
+                                    <tr>
+                                        <th>Speed</th>
+                                        <th id="speed"></th>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>
